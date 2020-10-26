@@ -2,84 +2,78 @@ body{
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    line-height: 120%;
+    font-size: 16px;
+    color: #666666;
 }
 
 #header{
+    border-top: 5px solid #009223;
     text-align: center;
-    margin-top: 30px;
     width: 100%;
     height: 165px;
 }
 
-ol, ul li{
+ul li{
     list-style: none;
-    float: left;
 }
 
-#gnb{
+/* menu-bar*/
+.main-bar{
     display: flex;
     justify-content: center;
-    width: 100%;
-    /* 메뉴바 아래로 내리기(position 고정) */
-    position: absolute;
-    top: 98px;
 }
-
-#gnb>ul{
-    display: inline-block;
-}
-
-#gnb>ul>li{
+.main-bar ul{
+    cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-
-    /* 넓이 주고 float: left하면 리스트가 가로로 펼쳐짐! */
-    float: left;
-    width: 165px;
+    width: 1000px;
+    display:flex;
+    justify-content: space-between;
 }
 
-#dp1{
-    font-size: 18px;
-    float: left;
+.logo{
+    position: relative;
+    top:35px;
 }
 
-.util_menu{
-    float: left;
-    margin-right: 40px;
-
-    position: absolute;
-    right: 25px;
-    top: 40px;
-}
-
-.util_menu li{
+.util-menu{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: -20px;
+}
+
+.util-menu ul{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
     align-items: center;
     font-size: 13px;
     color: #666666;
-    margin-left : 30px;
+    margin-right: 80px;
 }
 
-a:link{
-    color: #666666;
-    text-decoration: none;
+.sub-bar{
+    display: flex;
+    justify-content: center;
+    width: 1000px;
 }
 
-#signup::before{
-    background-color: #ddd;
-    content: '';
-    display: block;
-    border-radius: 50px;
-    position: absolute;
-    left: 117px;
-    top: 45%;
-    height: 3px;
-    width: 3px;
+.sub-bar ul{
+    display: flex;
+    flex-direction: column;
 }
 
-#global{
-    position: relative;
-    margin-left: 15px;
-    bottom: 7px;
+.main-bar:hover + .sub-bar{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-bar{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
