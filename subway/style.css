@@ -90,6 +90,8 @@ li{
 
 /* 이벤트 배너 */
 .event-wrapper{
+    width:100%;
+    text-align: center;
     position: absolute;
     top:177px;
     z-index: -1;
