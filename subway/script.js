@@ -1,11 +1,18 @@
-// const header = document.querySelector('.header');
-// const subMenu = document.querySelectorAll('.sub-menu');
+const banner = document.getElementById('slide');
+var imgIdx = 0;
+const imgArray = [
+  "imgs/banners/main_PC_1920x440_20201006040046969.jpg",
+  "imgs/banners/main_PC_1920x440_20201007112359990.jpg",
+  "imgs/banners/main_PC_1920x440_20201028065401190.jpg",
+  "imgs/banners/main_PC_1920x440_20201029050402793.jpg",
+  "imgs/banners/main_PC_1920x440_20201029105140247.jpg",
+  "imgs/banners/main_PC_1920x440_20201030114325133.jpg",
+];
 
-// header.addEventListener('mouseover',(e)=>{
-//     e.target.style.overflow = "inherit";
-//     subMenu.opacity = 1;
-// })
-// header.addEventListener('mouseout',(e)=>{
-//     e.target.style.overflow = "hidden";
-//     subMenu.opacity = 0 ;
-// })
+window.onload = setInterval(() => {
+    banner.setAttribute("src",imgArray[imgIdx]);
+    imgIdx+=1;
+    if(imgIdx>=imgArray.length){
+        imgIdx = 0;
+    }
+},2000);
